@@ -1,0 +1,31 @@
+{
+  "author": "Van Carney",
+  "name": "foo-db",
+  "description": "A simple in-memory Object DB Store",
+  "version": "0.0.1",
+  "main":"lib/foo-db.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vancarney/foo-db.git"
+  },
+  "dependencies": {
+    "js-arraycollection": "git+http://github.com/vancarney/js-arraycollection.git"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.12.0",
+    "chai": "~1.7.2",
+    "docco": "~0.6.2"
+  },
+  "homepage": "http://github.com/vancarney/foo-db.git",
+  "scripts": {
+    "test": "cake test",
+    "start": "node demo-server"
+  }
+}
