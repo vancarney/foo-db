@@ -23,7 +23,8 @@ if typeof exports != 'undefined'
       create:(obj)->
         return null if !obj 
         #crypto.createHash('md5').update(Math.random().toString()).digest('hex').substring(0,16)
-        @__collection.addAll _.map (if _.isArray obj then obj else [obj]), (v,k) => _.extend v, objectId : _.uniqueId() 
+        @__collection.addAll res = _.map (if _.isArray obj then obj else [obj]), (v,k) => _.extend v, objectId : _.uniqueId()
+        res 
       read:(where)->
         if (where?) then _.where @__collection.__list, where else @__collection.__list
       update:(where,obj)->
